@@ -7,9 +7,10 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+//    this is my first commet
+    cout << "Hey, this really works!" << endl;
 }
