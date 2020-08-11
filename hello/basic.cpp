@@ -9,5 +9,6 @@
 #include <iostream>
 int main(void) {
     std::cout << "Hello ";
-    std::cout << "World...";
+    std::cout << "World...\n";
+    std::cout << "I am Simon\n";
 }
