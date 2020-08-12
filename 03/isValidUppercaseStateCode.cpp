@@ -17,7 +17,7 @@ using namespace std;
 // Return true if the argument is a two-uppercase-letter state code, or
 // false otherwise.
 
-bool isValidUppercaseStateCode(string stateCode)
+bool isValidUppercaseStateCode2(string stateCode)
 {
     const string codes =
     "AL.AK.AZ.AR.CA.CO.CT.DE.DC.FL.GA.GU.HI.ID.IL.IN.IA.KS."
