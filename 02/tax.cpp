@@ -6,7 +6,7 @@ int main()
 {
     // Get infomation
     cout << "Name: ";
-    string name = "";
+    string name;
     getline(cin, name);
     if (name == "") {
         cout << "You must enter a name\n";
@@ -23,7 +23,7 @@ int main()
     }
     
     cout << "Occupantion: ";
-    string occupantion = "";
+    string occupantion;
     getline(cin, occupantion);
     if (occupantion == "") {
         cout << "You must enter an occupation\n";
@@ -39,7 +39,7 @@ int main()
         return 1;
     }
     
-    // calculate the tax
+    // Calculate the tax
     float tax = 0.0;
     if (income < 50000) {
         tax = income * 0.04;
@@ -49,7 +49,7 @@ int main()
             return 1;
         }
     }
-    if(income >= 50000 and income < 120000) {
+    else if(income < 120000) {
         if (occupantion == "engineer" or occupantion == "scientist") {
             tax = 50000 * 0.04 + (income - 50000) * 0.05;
         } else {
@@ -61,7 +61,7 @@ int main()
             return 1;
         }
     }
-    if (income >= 120000) {
+    else {
         if (occupantion == "engineer" or occupantion == "scientist") {
             tax = 50000 * 0.04 + 70000 * 0.05;
         } else {
