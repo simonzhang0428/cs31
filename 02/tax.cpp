@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main()
@@ -9,7 +10,7 @@ int main()
     string name;
     getline(cin, name);
     if (name == "") {
-        cout << "You must enter a name\n";
+        cout << "---\nYou must enter a name\n";
         return 1;
     }
     
@@ -18,7 +19,7 @@ int main()
     cin >> income;
     cin.ignore(10000, '\n');
     if (income < 0) {
-        cout << "The taxable income must be nonnegative\n";
+        cout << "---\nThe taxable income must be nonnegative\n";
         return 1;
     }
     
@@ -26,7 +27,7 @@ int main()
     string occupantion;
     getline(cin, occupantion);
     if (occupantion == "") {
-        cout << "You must enter an occupation\n";
+        cout << "---\nYou must enter an occupation\n";
         return 1;
     }
     
@@ -35,7 +36,7 @@ int main()
     cin >> num_children;
     cin.ignore(10000, '\n');
     if (num_children < 0) {
-        cout << "The number of children must be nonnegative";
+        cout << "---\nThe number of children must be nonnegative";
         return 1;
     }
     
@@ -71,6 +72,8 @@ int main()
     }
     
     // Display the result
+    cout.setf(ios::fixed);
+    cout.precision(2);
     cout << "---" << endl;
     cout << name << " would pay $" << tax << endl;
 }
