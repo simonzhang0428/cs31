@@ -27,6 +27,7 @@
 		AC22819E24E467B9006A5CAC /* 03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 03; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2281A124E467B9006A5CAC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AC2281A824E46A7A006A5CAC /* isValidUppercaseStateCode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = isValidUppercaseStateCode.cpp; sourceTree = "<group>"; };
+		AC2281AA24E46FAF006A5CAC /* pseudocode */ = {isa = PBXFileReference; lastKnownFileType = text; path = pseudocode; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			children = (
 				AC2281A124E467B9006A5CAC /* main.cpp */,
 				AC2281A824E46A7A006A5CAC /* isValidUppercaseStateCode.cpp */,
+				AC2281AA24E46FAF006A5CAC /* pseudocode */,
 			);
 			path = 03;
 			sourceTree = "<group>";

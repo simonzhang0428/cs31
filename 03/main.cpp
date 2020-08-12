@@ -11,7 +11,6 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     assert(3 > 2);
     cout << "Hello, World!\n";
     return 0;

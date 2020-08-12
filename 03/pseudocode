@@ -1,0 +1,10 @@
+...
+repeatedly:
+    find start of next word
+    if no remaining words,
+    break
+    find end of word
+    add word length to running total
+    increment number of words
+write average length, or that there were no words
+...
