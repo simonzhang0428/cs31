@@ -2,12 +2,11 @@
 #include <string>
 using namespace std;
 
-int main(int argc, const char * argv[]) {
-    string name = "", occupantion = "";
-    int income = 0, num_children = 0;
-    float tax = 0.0;
-    
+int main()
+{
+    // Get infomation
     cout << "Name: ";
+    string name = "";
     getline(cin, name);
     if (name == "") {
         cout << "You must enter a name\n";
@@ -15,6 +14,7 @@ int main(int argc, const char * argv[]) {
     }
     
     cout << "Taxable income: ";
+    int income = 0;
     cin >> income;
     cin.ignore(10000, '\n');
     if (income < 0) {
@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
     }
     
     cout << "Occupantion: ";
+    string occupantion = "";
     getline(cin, occupantion);
     if (occupantion == "") {
         cout << "You must enter an occupation\n";
@@ -30,6 +31,7 @@ int main(int argc, const char * argv[]) {
     }
     
     cout << "Number of children: ";
+    int num_children = 0;
     cin >> num_children;
     cin.ignore(10000, '\n');
     if (num_children < 0) {
@@ -37,9 +39,38 @@ int main(int argc, const char * argv[]) {
         return 1;
     }
     
+    // calculate the tax
+    float tax = 0.0;
+    if (income < 50000) {
+        tax = income * 0.04;
+        tax = tax - num_children * 200;
+        if (tax < 0) {
+            cout << "Tax must be nonnegative\n";
+            return 1;
+        }
+    }
+    if(income >= 50000 and income < 120000) {
+        if (occupantion == "engineer" or occupantion == "scientist") {
+            tax = 50000 * 0.04 + (income - 50000) * 0.05;
+        } else {
+            tax = 50000 * 0.04 + (income - 50000) * 0.06;
+        }
+        tax = tax - num_children * 200;
+        if (tax < 0) {
+            cout << "Tax must be nonnegative\n";
+            return 1;
+        }
+    }
+    if (income >= 120000) {
+        if (occupantion == "engineer" or occupantion == "scientist") {
+            tax = 50000 * 0.04 + 70000 * 0.05;
+        } else {
+            tax = 50000 * 0.04 + 70000 * 0.06;
+        }
+        tax = tax + (income - 120000) * 0.09;
+    }
+    
+    // Display the result
+    cout << "---" << endl;
     cout << name << " would pay $" << tax << endl;
-//    cout << name << endl;
-//    cout << income << endl;
-//    cout << occupantion << endl;
-//    cout << num_children << endl;
 }
